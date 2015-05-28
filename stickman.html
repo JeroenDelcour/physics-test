@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Physics simulation</title>
+		<meta charset="utf-8">
+		<style>
+		canvas {
+			display: block;
+			height: 500px;
+			width: 800px;
+			border: 1px solid black;
+			position: fixed;
+			left: 50%;
+			margin-left: -400px;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<canvas id="mainCanvas"></canvas>
+		<script src="requestAnimationFrame.js"></script>
+		<script src="stickman.js"></script>
+		<script>
+			init(); // start the game
+		</script>
+	</body>
+</html>

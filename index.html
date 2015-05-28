@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>Hard constraints and springs</title>
+		<meta charset="utf-8">
+		<style>
+		canvas {
+			display: block;
+			height: 600px;
+			width: 800px;
+			border: 1px solid black;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-top: -300px;
+			margin-left: -400px;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<div id="stats" style="font: 10px arial">
+			t: <span id="t"></span> <br/>
+			<h2>Box 1</h2>
+			Center of mass x: <span id="1-CMx"></span> <br/>
+			Center of mass y: <span id="1-CMy"></span> <br/>
+			Angle (degrees): <span id="1-angle"></span> <br/>
+			v(x): <span id="1-v"></span> <br/>
+			a(x): <span id="1-a"></span> <br/>
+			<h2>Box 2</h2>
+			Center of mass x: <span id="2-CMx"></span> <br/>
+			Center of mass y: <span id="2-CMy"></span> <br/>
+			Angle (degrees): <span id="2-angle"></span> <br/>
+			v(x): <span id="2-v"></span> <br/>
+			a(x): <span id="2-a"></span> <br/>
+			<h2>Spring</h2>
+			k: <span id="S-k"></span> <br/>
+			delta l: <span id ="S-dl"></span> <br/>
+			<!-- angular motion stats
+			Angular velocity (radians/s): <span id="angV"></span> <br/>
+			Angular acceleration (radians/s^2): <span id="alpha"></span> <br/>
+			Torque (player input): <span id="Ti"></span> <br/>
+			Torque (net): <span id="Tn"></span> <br/>
+			Inertia(CM): <span id="Icm"></span> <br/>
+			Inertia(axis): <span id="Ip"></span> <br/>
+			<br/> -->
+			<br/>
+			Test: <span id="test"></span><br/>
+			<br/>
+			FPS: <span id="FPS"></span><br/>
+			<br/>
+			<p style="font-style: italic; max-width: 20%">Use the arrow keys to move around the small box attached to the circle.</p>
+		</div>
+		<canvas id="mainCanvas"></canvas>
+		<script src="requestAnimationFrame.js"></script>
+		<script src="constraints.js"></script>
+		<script>
+			init(); // start the physics simulation
+		</script>
+	</body>
+</html>
